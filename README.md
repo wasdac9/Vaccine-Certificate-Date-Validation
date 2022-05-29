@@ -90,4 +90,4 @@ With this project we proved the concept that the manual task of Validating Vacci
 ## Future Work
 In the mobile first world, this project can be deployed on a mobile device which has a camera (for video input),
 a flash (for sufficient light) and enough computation power to carry out OCR on the mobile. This would reduce the cost of hardware like PC, webcam, etc at the entrance of establishments. 
-But since the government is lifting the pandemic regulations now with COVID-19 cases dropping day by day, the need to check vaccine certificates is becomming unnecessary, hence any future work on this project seems unlikely.
+But since the government is lifting the pandemic regulations now with COVID-19 cases dropping day by day, the need to check vaccine certificates is becoming unnecessary, hence any future work on this project seems unlikely.

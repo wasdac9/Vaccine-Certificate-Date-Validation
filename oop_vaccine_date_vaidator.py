@@ -8,7 +8,7 @@ import time
 
 
 class Page(tk.Frame):
-    pytesseract.pytesseract.tesseract_cmd = r"C:\Users\wasda\Desktop\CODES\Tesseract-OCR\tesseract.exe"
+    pytesseract.pytesseract.tesseract_cmd = r"C:\path\to\tesseract.exe" # Path to tesseract.exe
     tdy = datetime.today()
     allowed = tdy - timedelta(days=14)
     img2str_config = "--psm 1"
@@ -36,7 +36,7 @@ class VaccineValidator(Page):
 
         frame_right = tk.Frame(self,bg="white")
         frame_right.place(relx=0.8,rely=0,relwidth=0.2,relheight=1)
-        self.canvas = tk.Canvas(frame_right, bd=0, highlightthickness=0, bg="white")#"#0a1529"
+        self.canvas = tk.Canvas(frame_right, bd=0, highlightthickness=0, bg="white")
         self.canvas.create_oval(55,20,155,120,fill='gray',outline='gray')
         self.canvas.place(relx=0,rely=0,relwidth=1,relheight=0.2)
 
@@ -52,7 +52,7 @@ class VaccineValidator(Page):
     def show_images(self):
         Page.flag = True
         ret, img = Page.cap.read()
-        #img = cv2.rotate(img,cv2.ROTATE_90_CLOCKWISE)
+        #img = cv2.rotate(img,cv2.ROTATE_90_CLOCKWISE)       #Uncomment to Display Live Video in Potrait Mode
         self.img1 = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         img_show = Image.fromarray(self.img1)
         imgtk = ImageTk.PhotoImage(image=img_show)
